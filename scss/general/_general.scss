@@ -1,0 +1,258 @@
+body {
+  background-image: url(../src/background.jpg);
+  background-attachment: fixed;
+}
+
+h1 {
+  @include title(2.5rem, white, $color-gray);
+  @include marg-pad;
+}
+
+h3 {
+  @include title(2rem, $color-black, $color-white);
+  text-align: left;
+}
+
+.box {
+  width: 30%;
+  height: auto;
+  border: solid black;
+  border-radius: 10%;
+  text-align: center;
+  @include marg-pad;
+}
+
+legend {
+  @include title(2rem, $color-white, $color-black);
+}
+
+p {
+  @include text(2rem, 400);
+  @include p-text {
+    @include text(1.5rem, 200);
+    font-family: map-get($map: $varFonts, $key: "tiro");
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+img {
+  border-radius: 15%;
+}
+
+iframe {
+  border-radius: 15%;
+}
+
+/* Fin etiquetas principales */
+
+/* inicio clases y IDs */
+
+.boxVideo {
+  border: none;
+  width: auto;
+  height: auto;
+  margin: 1%;
+  padding: 1%;
+  border: solid black;
+  border-radius: 10%;
+}
+
+.cajaMain {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 2%;
+}
+
+.photoBox {
+  width: 30%;
+  height: auto;
+  max-width: 500px;
+  max-height: auto;
+  margin: 2%;
+  padding: 1%;
+}
+
+.reduceFooter {
+  width: 25%;
+  height: auto;
+  min-width: 300px;
+  margin: 1%;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footerNav-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.socialBox {
+  display: flex;
+  width: 30%;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-end;
+  margin: 1%;
+}
+
+.social {
+  width: 50%;
+  height: auto;
+}
+
+.headerBox {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+
+.reduceLogo {
+  max-width: 350px;
+  height: auto;
+  max-height: 200px;
+  border-radius: 10%;
+  @include logo-sm {
+    max-width: 150px;
+  }
+  @include logo-md {
+    max-width: 200px;
+  }
+}
+
+.navBox {
+  width: auto;
+  height: auto;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 15px;
+  padding: 10px;
+  border: 5px black solid;
+  background-color: #84c325;
+  border-radius: 10%;
+  list-style: none;
+}
+
+.formTasacion {
+  display: flex;
+  flex-direction: column;
+}
+
+.formCheck {
+  align-items: center;
+  align-content: center;
+}
+
+.alignCheck {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-container-sobreNosotros {
+  display: flex;
+  justify-content: space-between;
+  margin: 3%;
+}
+
+.bg-logoInmb {
+  background-color: rgb(255, 255, 255);
+  padding: 2%;
+  border-radius: 2%;
+}
+
+.placeholderSize {
+  width: 50%;
+  height: auto;
+}
+
+.mapMod {
+  margin: 3%;
+}
+
+.centerAll {
+  text-align: center;
+}
+
+.button {
+  border-style: solid black;
+  font-size: 2rem;
+  text-align: center;
+  margin: 2%;
+}
+
+.asideStyle {
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+  width: 100%;
+  height: fit-content;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: rgb(104, 104, 104, 0.5);
+}
+
+.asideStyle li {
+  list-style: none;
+}
+
+.bg-footer {
+  background-color: $color-green;
+  font-family: map-get($map: $varFonts, $key: "edu");
+}
+
+.bg-light-copy {
+  background-color: $color-black;
+}
+
+.bg-light-form {
+  background-color: $color-green-light;
+}
+
+.bg-btn {
+  background-color: $color-gray;
+}
+.reduceImg {
+  max-width: 450px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flexCheck {
+  display: flex;
+  flex-direction: column;
+}
+.fit-img {
+  max-width: 350px;
+}
+
+.bg-copy {
+  background-color: $color-black-light;
+}
+
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  > a {
+    @extend .scale;
+  }
+}

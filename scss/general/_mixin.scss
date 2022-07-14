@@ -1,0 +1,25 @@
+@mixin d-flex ($direction, $justify, $align){
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin marg-pad {
+    margin: 1%;
+    padding: 1%;
+}
+
+@mixin title ($size,$color,$background) {
+    font-size: $size;
+    color: $color;
+    background-color: $background;
+    text-align: center;
+    font-weight: 500;
+}
+
+@mixin text ($size, $weight){
+    font-size: $size;
+    font-weight: $weight;
+}
