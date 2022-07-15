@@ -1,0 +1,17 @@
+.flexcol {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+@include marg-pad;
+> div {
+    @extend .text-box
+};
+> iframe {
+    @extend .text-box
+}
+}
+
+.text-box {
+    width: 50%;
+    height: auto;
+}

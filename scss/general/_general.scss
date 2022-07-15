@@ -13,6 +13,7 @@ h3 {
   text-align: left;
 }
 
+
 .box {
   width: 30%;
   height: auto;
@@ -27,7 +28,7 @@ legend {
 }
 
 p {
-  @include text(2rem, 400);
+  @include text(1.5rem, 400);
   @include p-text {
     @include text(1.5rem, 200);
     font-family: map-get($map: $varFonts, $key: "tiro");

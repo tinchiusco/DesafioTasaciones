@@ -1,12 +1,17 @@
+//reset vars
+
+$font-size-base: 1.5rem;
+
 //vars nav
-$nav-link-font-size: 1.8rem;
+$navbar-light-hover-color: $color-green-light;
+$nav-link-font-size: 1.5rem;
 $nav-link-font-weight: 500;
 $nav-link-color: $color-black;
 $primary: rgba(104, 104, 104, 1);
 
 //vars accordeon
 $accordion-button-color: $color-black;
-$font-size-base: 1.5rem;
+
 $accordion-button-bg: $color-green-light;
 $accordion-border-color: $color-black;
 
@@ -20,3 +25,4 @@ $accordion-border-color: $color-black;
   --bs-bg-opacity: 0.5;
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
 }
+

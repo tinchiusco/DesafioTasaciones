@@ -10290,18 +10290,6 @@ textarea.form-control-lg {
   background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity));
 }
 
-.flexcol {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 1%;
-  padding: 1%;
-}
-.text-box, .flexcol > div, .flexcol > iframe {
-  width: 50%;
-  height: auto;
-}
-
 .scale :hover, .footer-center > a :hover {
   transform: scale(1.5);
 }
@@ -10584,4 +10572,4 @@ iframe {
   align-content: center;
 }
 
-/*# sourceMappingURL=reducido.css.map */
+/*# sourceMappingURL=style.css.map */
