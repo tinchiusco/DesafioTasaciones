@@ -10553,6 +10553,11 @@ iframe {
 
 .bg-footer {
   background-color: #85c226;
+}
+.bg-footer section p {
+  font-family: "Edu QLD Beginner";
+}
+.bg-footer div {
   font-family: "Edu QLD Beginner";
 }
 

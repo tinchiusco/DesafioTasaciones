@@ -212,7 +212,14 @@ iframe {
 
 .bg-footer {
   background-color: $color-green;
-  font-family: map-get($map: $varFonts, $key: "edu");
+  & section {
+    & p {
+      font-family: map-get($map: $varFonts, $key: "edu");
+    }
+  }
+  & div {
+    font-family: map-get($map: $varFonts, $key: "edu");
+  }
 }
 
 .bg-light-copy {
@@ -252,11 +259,11 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   @include p-text {
-    flex-direction: column
+    flex-direction: column;
   }
   > a {
     @extend .scale;
   }
-}
+  }
+
