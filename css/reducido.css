@@ -10292,14 +10292,28 @@ textarea.form-control-lg {
 
 .flexcol {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   margin: 1%;
   padding: 1%;
 }
+@media (max-width: 768px) {
+  .flexcol {
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .flexcol > div {
+    width: 100%;
+  }
+}
 .text-box, .flexcol > div, .flexcol > iframe {
   width: 50%;
   height: auto;
+}
+@media (max-width: 768px) {
+  .text-box, .flexcol > div, .flexcol > iframe {
+    width: 100%;
+  }
 }
 
 .scale :hover, .footer-center > a :hover {
