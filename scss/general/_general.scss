@@ -252,7 +252,10 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
+  
+  @include p-text {
+    flex-direction: column
+  }
   > a {
     @extend .scale;
   }

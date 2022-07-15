@@ -10595,7 +10595,11 @@ iframe {
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
+}
+@media (max-width: 768px) {
+  .footer-center {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=reducido.css.map */
