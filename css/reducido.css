@@ -10474,81 +10474,14 @@ iframe {
   }
 }
 
-.navBox {
-  width: auto;
-  height: auto;
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 15px;
-  padding: 10px;
-  border: 5px black solid;
-  background-color: #84c325;
-  border-radius: 10%;
-  list-style: none;
-}
-
-.formTasacion {
-  display: flex;
-  flex-direction: column;
-}
-
-.formCheck {
-  align-items: center;
-  align-content: center;
-}
-
-.alignCheck {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-.flex-container-sobreNosotros {
-  display: flex;
-  justify-content: space-between;
-  margin: 3%;
-}
-
 .bg-logoInmb {
   background-color: rgb(255, 255, 255);
   padding: 2%;
   border-radius: 2%;
 }
 
-.placeholderSize {
-  width: 50%;
-  height: auto;
-}
-
 .mapMod {
   margin: 3%;
-}
-
-.centerAll {
-  text-align: center;
-}
-
-.button {
-  border-style: solid black;
-  font-size: 2rem;
-  text-align: center;
-  margin: 2%;
-}
-
-.asideStyle {
-  display: flex;
-  justify-content: center;
-  margin: 0%;
-  padding: 0%;
-  width: 100%;
-  height: fit-content;
-  font-size: 2rem;
-  font-weight: 600;
-  background-color: rgba(104, 104, 104, 0.5);
-}
-
-.asideStyle li {
-  list-style: none;
 }
 
 .bg-footer {
