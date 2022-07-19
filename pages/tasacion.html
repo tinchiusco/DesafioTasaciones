@@ -10,7 +10,7 @@
     <meta name="copyright" content="Inmobiliaria Rivas Anaya">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="shortcut icon" href="../src/favicon.jpg">
-    <link rel="stylesheet" href="../css/reducido.css">
+    <link rel="stylesheet" href="../css/style.css">
    
     <title>Genera tu tasacion con nuestro programa o solicita una personalizada</title>
 </head>
@@ -54,7 +54,7 @@
            
     
     <!-- Form start -->
-    <form action="solicitudTasacion.php" class="container-fluid g-3 my-4 bg-light-form">
+    <form action="solicitudTasacion.php" class="container-fluid g-3 my-4 bg-light-form bg-form">
         <legend>Datos del solicitante</legend>
         <div class="col-lg-6 col-md-6 ">
             <label for="nombre" class="form-label">Nombre y apellido</label>
@@ -80,6 +80,7 @@
               <option value="">Brasil</option>
             </select>
           </div>
+          
           <div class="col-4">
             <label for="provincia" class="form-label">Provincia</label>
             <select id="provincia" class="form-select">
@@ -132,14 +133,44 @@
             </div>
         <legend class="mt-4">Seleccione las opciones que posee disponible la propiedad/terreno</legend>
             
-        <div class="formCheck flexCheck">
-            <input type="checkbox" name="baños"> <label for="baños">Baños</label>
+        <div class="formCheck d-flex justify-content-around flex-wrap">
+          <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="baños"><label for="baños">Baños</label>
+          </div>
+          <div class="m-5 checkBox d-flex justify-content-start">
             <input type="checkbox" name="garage"><label for="garage">Garage</label>
-            <input type="checkbox" name="electricidad"> <label for="electricidad">Luz Electrica</label>
+          </div>
+          <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="electricidad"><label for="electricidad">Luz Electrica</label>
+          </div>
+          <div class="m-5 checkBox d-flex justify-content-start">
             <input type="checkbox" name="aguaRed"><label for="aguaRed">Agua de red</label>
-            <input type="checkbox" name="piscina"> <label for="piscina">Piscina</label>
-            <input type="checkbox" name="aguaPerforacion"><label for="aguaPerforacion">Pozo perforado</label>
-        </div>
+          </div>
+          <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="piscina"><label for="piscina">Piscina</label>
+          </div>
+          <div class="m-5 checkBox d-flex justify-content-start">
+           <input type="checkbox" name="aguaPerforacion"><label for="aguaPerforacion">Pozo perforado</label>
+          </div>
+          <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="asfalto"><label for="asfalto">Asfalto</label>
+           </div>
+           <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="esquina"><label for="esquina">En esquina</label>
+           </div>
+           <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="barriocerrado"><label for="barriocerrado">Barrio cerrado</label>
+           </div>
+           <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="seguridad"><label for="seguridad">Seguridad 24hs</label>
+           </div>
+           <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="quincho"><label for="quincho">Quincho</label>
+           </div>
+           <div class="m-5 checkBox d-flex justify-content-start">
+            <input type="checkbox" name="parrilla"><label for="parrilla">Parrilla</label>
+           </div>
+          </div>
         
         <legend>Ingrese la ubicación exacta de su terreno/propiedad</legend>
         
@@ -160,11 +191,14 @@
     <footer class=" text-center text-white my-4 bg-footer">
       <div class="container p-4">
           <section class="mb-4 footer-center">
+            <div>
               <a class="btn btn-floating m-1" href="https://www.facebook.com/Inmobiliariarivasanaya" role="button"><i class="fab fa-facebook-f"><img class="social" src= "../src/social/facebook.svg" alt="Link a red social facebook"></i></a>
               <a class="btn btn-floating m-1"  href="https://www.instagram.com/inmobiliaria_rivas_anaya/" role="button"><i class="fab fa-instagram"><img class="social" src= "../src/social/instagram.svg" alt="Link a red social instagram"></i></a>
+          </div>
+          <div>
               <a class="btn btn-floating m-1" href="https://wa.me/+543751525496" role="button"><i class="fab fa-whatsapp"><img class="social" src= "../src/social/whatsapp2.svg" alt="Link a whatsapp"></i></a>
               <a class="btn btn-floating m-1" href="https://github.com/tinchiusco" role="button"><i class="fab fa-github"><img class="social" src="../src/social/github.svg" alt="Link a red de github"></i></a>
-
+          </div>
           </section>
       
           <section class="mb-4">

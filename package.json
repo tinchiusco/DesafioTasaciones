@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile:sass": "sass --watch scss/style.scss css/reducido.css",
-    "clean:css": "purgecss --css css/style.css --content *.html ./pages/*html -o css/reducido.css"
+    "clean:css": "purgecss --css css/reducido.css --content *.html ./pages/*html -o css/style.css"
   },
   "repository": {
     "type": "git",

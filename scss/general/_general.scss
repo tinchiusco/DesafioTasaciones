@@ -133,6 +133,8 @@ iframe {
   }
 }
 
+  
+
 
 .bg-logoInmb {
   background-color: rgb(255, 255, 255);
@@ -140,6 +142,10 @@ iframe {
   border-radius: 2%;
 }
 
+.bg-form {
+  background-image: url(/src/casa.svg);
+  background-repeat: space; 
+}
 
 .mapMod {
   margin: 3%;
@@ -168,9 +174,7 @@ iframe {
 .bg-btn {
   background-color: $color-gray;
 }
-.reduceImg {
-  max-width: 450px;
-}
+
 
 .display {
   display: flex;
@@ -195,10 +199,32 @@ iframe {
   justify-content: center;
   align-items: center;
   @include p-text {
-    flex-direction: column;
+    width: fit-content;
   }
   > a {
     @extend .scale;
   }
   }
 
+.checkBox {
+  width: 20%;
+  & input {
+    @include marg-pad;
+  }
+  & label {
+    margin-left: 20px;
+  }
+  @include logo-sm {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+
+.reduceImg {
+  @include img {
+  width: 250px;
+  @include p-text {
+    width: 100px;
+  }
+  }
+}

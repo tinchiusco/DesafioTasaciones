@@ -15,4 +15,10 @@
     @media  (max-width: 768px) {
         @content
     }
-}
+};
+
+@mixin img {
+    @media (max-width: 1050px){
+        @content
+    }
+};

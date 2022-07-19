@@ -10,12 +10,12 @@
     <meta name="copyright" content="Inmobiliaria Rivas Anaya">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="shortcut icon" href="../src/favicon.jpg">
-    <link rel="stylesheet" href="../css/reducido.css">
+    <link rel="stylesheet" href="../css/style.css">
    
     <title>Te contamos quienes somos, historia y nuestra trayectoria</title>
 </head>
 
-<body>
+<body class="container-fluid">
     <header>  
             
         </div>
@@ -50,25 +50,13 @@
     </header>
     <main>
         <h1 class="p-1 m-2">Sobre nosotros y trayectoria</h1>
-
-        <section class="d-flex justify-content-center">
-        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item">
-                <img src="../src/mnes_satelite.jpg" class="d-block w-100 reduceImg" alt="foto satelital de Misiones">
-              </div>
-            <div class="carousel-item active">
-                <img src="../src/modeloTasacion_Página_1.png" class="d-block w-100 reduceImg" alt="foto de tasacion de ejemplo pagina 1">
-              </div>
-            <div class="carousel-item">
-                <img src="../src/modeloTasacion_Página_2.png" class="d-block w-100 reduceImg" alt="foto de tasacion ejemplo pagina 2">
-              </div>
-            <div class="carousel-item">
-                <img src="../src/modeloTasacion_Página_3.png" class="d-block w-100 reduceImg" alt="foto de tasacion ejemplo pagina 3">
+            <div class="d-flex justify-content-evenly">
+                <img class="animate__animated animate__flipInY reduceImg" src="../src/modeloTasacion_Página_1.png" alt="">
+                <img class="animate__animated animate__flipInY animate__delay-1s reduceImg" src="../src/modeloTasacion_Página_2.png" alt="">
+                <img class="animate__animated animate__flipInY animate__delay-2s reduceImg" src="../src/modeloTasacion_Página_3.png" alt="">
             </div>
-        </div>
-          </div>
-        </section>
+                
+
         <section class="container-fluid row mt-4">
         <p class="col-md-6 col-lg-7 border-success"> 
             El proyecto e Inmobiliaria Rivas Anaya nacen del corazon de Misiones, en el centro de la ciudad de Montecarlo. 
@@ -92,11 +80,14 @@
     <footer class=" text-center text-white my-4 bg-footer">
         <div class="container p-4">
             <section class="mb-4 footer-center">
-                <a class="btn btn-floating m-1" href="https://www.facebook.com/Inmobiliariarivasanaya" role="button"><i class="fab fa-facebook-f"><img class="social" src= "../src/social/facebook.svg" alt="Link a red social facebook"></i></a>
-                <a class="btn btn-floating m-1"  href="https://www.instagram.com/inmobiliaria_rivas_anaya/" role="button"><i class="fab fa-instagram"><img class="social" src= "../src/social/instagram.svg" alt="Link a red social instagram"></i></a>
-                <a class="btn btn-floating m-1" href="https://wa.me/+543751525496" role="button"><i class="fab fa-whatsapp"><img class="social" src= "../src/social/whatsapp2.svg" alt="Link a whatsapp"></i></a>
-                <a class="btn btn-floating m-1" href="https://github.com/tinchiusco" role="button"><i class="fab fa-github"><img class="social" src="../src/social/github.svg" alt="Link a red de github"></i></a>
-
+                <div>
+                    <a class="btn btn-floating m-1" href="https://www.facebook.com/Inmobiliariarivasanaya" role="button"><i class="fab fa-facebook-f"><img class="social" src= "../src/social/facebook.svg" alt="Link a red social facebook"></i></a>
+                    <a class="btn btn-floating m-1"  href="https://www.instagram.com/inmobiliaria_rivas_anaya/" role="button"><i class="fab fa-instagram"><img class="social" src= "../src/social/instagram.svg" alt="Link a red social instagram"></i></a>
+                </div>
+                <div>
+                    <a class="btn btn-floating m-1" href="https://wa.me/+543751525496" role="button"><i class="fab fa-whatsapp"><img class="social" src= "../src/social/whatsapp2.svg" alt="Link a whatsapp"></i></a>
+                    <a class="btn btn-floating m-1" href="https://github.com/tinchiusco" role="button"><i class="fab fa-github"><img class="social" src="../src/social/github.svg" alt="Link a red de github"></i></a>
+                </div>
             </section>
         
             <section class="mb-4">
