@@ -6,6 +6,7 @@ body {
 h1 {
   @include title(2.5rem, white, $color-gray);
   @include marg-pad;
+  @include shadow;
 }
 
 h3 {
@@ -32,6 +33,9 @@ p {
   @include p-text {
     @include text(1.5rem, 200);
     font-family: map-get($map: $varFonts, $key: "tiro");
+  }
+  @include sm-screen {
+    @include text (1rem, 200)
   }
 }
 
@@ -81,7 +85,7 @@ iframe {
 .reduceFooter {
   width: 25%;
   height: auto;
-  min-width: 300px;
+  min-width: 150px;
   margin: 1%;
 }
 
@@ -122,15 +126,21 @@ iframe {
 
 .reduceLogo {
   max-width: 350px;
-  height: auto;
   max-height: 200px;
   border-radius: 10%;
-  @include logo-sm {
-    max-width: 150px;
-  }
   @include logo-md {
     max-width: 200px;
   }
+  @include logo-sm {
+    max-width: 150px;
+  }
+  @include sm-screen {
+    max-width: 100px;
+  }
+}
+
+.nav-link{
+  @include shadow;
 }
 
   
@@ -152,10 +162,11 @@ iframe {
 }
 
 .bg-footer {
-  background-color: $color-green;
+  background-color: $color-black-light;
   & section {
     & p {
       font-family: map-get($map: $varFonts, $key: "edu");
+      @include shadow; 
     }
   }
   & div {
@@ -187,7 +198,10 @@ iframe {
   flex-direction: column;
 }
 .fit-img {
-  max-width: 350px;
+  width: fit-content;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 2%;
 }
 
 .bg-copy {

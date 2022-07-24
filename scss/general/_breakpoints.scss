@@ -22,3 +22,10 @@
         @content
     }
 };
+
+@mixin sm-screen {
+    @media (max-width:350px) {
+        @content
+    }
+    
+}
