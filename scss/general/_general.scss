@@ -7,6 +7,9 @@ h1 {
   @include title(2.5rem, white, $color-gray);
   @include marg-pad;
   @include shadow;
+  @include logo-sm {
+    font-size: 2rem;
+  }
 }
 
 h3 {
@@ -202,6 +205,10 @@ iframe {
   max-width: 100%;
   overflow: hidden;
   margin-top: 2%;
+}
+
+span {
+  text-decoration: underline;
 }
 
 .bg-copy {
