@@ -10335,6 +10335,11 @@ h1, .h1 {
   padding: 1%;
   text-shadow: 2px 2px 4px rgb(17, 16, 16);
 }
+@media (max-width: 500px) {
+  h1, .h1 {
+    font-size: 2rem;
+  }
+}
 
 h3, .h3 {
   font-size: 2rem;
@@ -10543,6 +10548,10 @@ iframe {
   max-width: 100%;
   overflow: hidden;
   margin-top: 2%;
+}
+
+span {
+  text-decoration: underline;
 }
 
 .bg-copy {
