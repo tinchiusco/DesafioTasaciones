@@ -10369,14 +10369,14 @@ legend {
 }
 
 p {
+  font-family: "Tiro Devanagari Marathi";
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 200;
 }
 @media (max-width: 768px) {
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 200;
-    font-family: "Tiro Devanagari Marathi";
   }
 }
 @media (max-width: 350px) {

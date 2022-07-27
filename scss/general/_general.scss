@@ -32,10 +32,10 @@ legend {
 }
 
 p {
-  @include text(1.5rem, 400);
+  font-family: map-get($map: $varFonts, $key: "tiro");
+  @include text(1.5rem, 200);
   @include p-text {
-    @include text(1.5rem, 200);
-    font-family: map-get($map: $varFonts, $key: "tiro");
+  @include text(1.2rem, 200);
   }
   @include sm-screen {
     @include text (1rem, 200)
