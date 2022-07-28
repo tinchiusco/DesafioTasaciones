@@ -12,6 +12,15 @@ h1 {
   }
 }
 
+h2 {
+  @include title(2rem, white, $color-gray);
+  @include marg-pad;
+  @include shadow;
+  @include logo-sm {
+    font-size: 1.5rem;
+  }
+}
+
 h3 {
   @include title(2rem, $color-black, $color-white);
   text-align: left;
@@ -29,6 +38,9 @@ h3 {
 
 legend {
   @include title(2rem, $color-white, $color-black);
+  @include sm-screen {
+    font-size: 1.5rem;
+  }
 }
 
 p {
@@ -146,9 +158,6 @@ iframe {
   @include shadow;
 }
 
-  
-
-
 .bg-logoInmb {
   background-color: rgb(255, 255, 255);
   padding: 2%;
@@ -156,7 +165,7 @@ iframe {
 }
 
 .bg-form {
-  background-image: url(/src/casa.svg);
+  background-image: url(../src/casa.svg);
   background-repeat: space; 
 }
 

@@ -1041,10 +1041,6 @@ textarea.form-control {
   margin: 0.5rem !important;
 }
 
-.m-3 {
-  margin: 1rem !important;
-}
-
 .m-4 {
   margin: 1.5rem !important;
 }
@@ -1085,6 +1081,10 @@ textarea.form-control {
 
 .p-1 {
   padding: 0.25rem !important;
+}
+
+.p-2 {
+  padding: 0.5rem !important;
 }
 
 .p-3 {
@@ -1178,6 +1178,22 @@ h1, .h1 {
   }
 }
 
+h2, .h2 {
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(104, 104, 104, 0.5);
+  text-align: center;
+  font-weight: 500;
+  margin: 1%;
+  padding: 1%;
+  text-shadow: 2px 2px 4px rgb(17, 16, 16);
+}
+@media (max-width: 500px) {
+  h2, .h2 {
+    font-size: 1.5rem;
+  }
+}
+
 legend {
   font-size: 2rem;
   color: rgb(238, 237, 237);
@@ -1185,16 +1201,21 @@ legend {
   text-align: center;
   font-weight: 500;
 }
+@media (max-width: 350px) {
+  legend {
+    font-size: 1.5rem;
+  }
+}
 
 p {
+  font-family: "Tiro Devanagari Marathi";
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 200;
 }
 @media (max-width: 768px) {
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 200;
-    font-family: "Tiro Devanagari Marathi";
   }
 }
 @media (max-width: 350px) {
@@ -1263,7 +1284,7 @@ iframe {
 }
 
 .bg-form {
-  background-image: url(/src/casa.svg);
+  background-image: url(../src/casa.svg);
   background-repeat: space;
 }
 
