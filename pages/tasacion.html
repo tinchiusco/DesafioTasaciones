@@ -66,6 +66,10 @@
             <input id="name" type="text" class="form-control" placeholder="Juan Perez">
         </div>
         <div class="col-lg-6 col-md-6">
+          <label for="dni" class="form-label">DNI</label>
+          <input type="number" class="form-control" id="dni" placeholder="12504556">
+      </div>
+        <div class="col-lg-6 col-md-6">
             <label for="email" class="form-label">Email</label>
             <input type="email" class="form-control" id="email" placeholder="tumail@correo.com">
         </div>
@@ -90,17 +94,17 @@
             <label for="province" class="form-label">Provincia</label>
             <select id="province" class="form-select">
               <option selected>Misiones</option>
-              <option value="Corrientes">Corrientes</option>
-              <option value="Chaco">Chaco</option>
-              <option value="Formosa">Formosa</option>
-              <option value="Salta">Salta</option>
+              <option value="Corrientes">Corrientes(no disponible)</option>
+              <option value="Chaco">Chaco(no disponible)</option>
+              <option value="Formosa">Formosa(no disponible)</option>
+              <option value="Salta">Salta(no disponible)</option>
             </select>
           </div>
     
         <div class="col-6">
           <label for="city" class="form-label">Ciudad</label>
           <select id="city" class="form-select">
-            <option selected>Eldorado</option>
+            <option value= "Eldorado" selected>Eldorado</option>
             <option value="El Alcazar">El Alcazar</option>
             <option value="Montecarlo">Montecarlo</option>
             <option value="Pto Iguazu">Puerto Iguazu</option>
@@ -193,12 +197,14 @@
 
         <div class="col-12">
             <button id="start" type="submit" class="btn btn-outline-dark m-2 btn-lg bg-btn">Enviar</button>
-            <button type="button" type="reset" class="btn btn-outline-dark m-2 btn-lg bg-btn">Reset</button>
+            <button type="reset" class="btn btn-outline-dark m-2 btn-lg bg-btn">Reset</button>
+            <button id="admin" type="button" class="btn btn-outline-dark m-2 btn-lg bg-btn">Ingreso solo para Administrador</button>
           </div>
        
         </form>
 
         <div id="abstract"></div>
+       
     
         
         <!-- Form ends -->
