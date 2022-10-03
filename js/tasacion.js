@@ -2,7 +2,7 @@
 
 
 class Client {
-    constructor(name,dni,email,address,phone,country,province,city,mFront, mBg, totalM, priceMeter, priceTotal, date /* owner */){
+    constructor(name,dni,email,address,phone,country,province,city, owner, mFront, mBg, totalM, priceMeter, priceTotal, date){
     this.name = name;
     this.dni = dni;
     this.email = email;
@@ -11,7 +11,8 @@ class Client {
     this.country = country;
     this.province = province;
     this.city = city;
-    /* this.owner = owner; */
+    this.owner = owner;
+    
 
     //propiedad
 
@@ -57,7 +58,7 @@ const client = [];
     const country = document.getElementById("country");
     const province = document.getElementById("province");
     const city = document.getElementById("city");
-    /* const owner = document.getElementById("owner"); */
+    const owner = check();
 
     const mFront = document.getElementById("mFront");
     const mBg = document.getElementById("mBg");
@@ -66,7 +67,7 @@ const client = [];
     const priceTotal = calcPrice(totalMeter,priceMeter)
     const date = new Date();
 
-    const clientAp = new Client(name.value, dni.value, email.value, address.value, phone.value, country.value, province.value, city.value, mFront.value, mBg.value, totalMeter, priceMeter, priceTotal, date/* , owner.value */);
+    const clientAp = new Client(name.value, dni.value, email.value, address.value, phone.value, country.value, province.value, city.value, owner, mFront.value, mBg.value, totalMeter, priceMeter, priceTotal, date);
     
     /* const propAp = new Prop(mFront.value, mBg.value, totalMeter, priceMeter, priceTotal, date); */
     
@@ -100,6 +101,7 @@ const client = [];
                     <p>Pais: ${clientAp.country}</p>
                     <p>Provincia: ${clientAp.province}</p>
                     <p>Ciudad: ${clientAp.city}</p>
+                    <p>Relacion con el inmueble: ${clientAp.owner}</p>
                     <p>Metros de frente: ${clientAp.mFront}</>
                     <p>Metros de fondo: ${clientAp.mBg}</>
                     <p>Metros cuadrados totales: ${clientAp.totalMeter}</p>
@@ -108,7 +110,15 @@ const client = [];
                     abstract.innerHTML = aux; 
     }
     
-    
+    function check(){
+       let owner = document.getElementsByName("owner");
+
+       for (i = 0; i< owner.length ; i++)
+        if (owner[i].checked) {
+            return owner[i].value;
+        }
+    }
+       
   
     function calcMeter (mFront, mBg){
         return mFront.value * mBg.value
@@ -139,9 +149,25 @@ const client = [];
     const admin = document.getElementById("admin");
 
     admin.addEventListener("click", () => {
+
+    
+        
+        /* let passwordInput = `<div>
+        <label for="password" class="form-label">Ingrese su clave de administrador</label>
+        <input class="form-control" id="password" placeholder="La clave es 1234 (como mi banco)">
+        <button id="signIn" type="submit" class="btn btn-outline-dark m-2 btn-lg bg-btn">Ingresar</button>
+        </div>` 
+        
+
+        abstract.innerHTML = passwordInput
+
+        const signIn = document.getElementById("signIn")
+        signIn.addEventListener("click", () => {
+            const password = 1234 */
+        
         const client = JSON.parse(localStorage.getItem("Client"));
         let aux = "";
-       
+
         client.forEach( client => {
             aux += `<div class="admin">
             <p>Comitente: ${client.name}</p>
@@ -152,6 +178,7 @@ const client = [];
             <p>Pais: ${client.country}</p>
             <p>Provincia: ${client.province}</p>
             <p>Ciudad: ${client.city}</p>
+            <p>Relacion con el inmueble: ${client.owner}</p>
             <p>Metros de frente: ${client.mFront}</>
             <p>Metros de fondo: ${client.mBg}</>
             <p>Metros cuadrados totales: ${client.totalMeter}</p>
@@ -159,10 +186,10 @@ const client = [];
             </div>`
       
         abstract.innerHTML = aux; 
-        })
-            })
+        })}
+            )
         
-        
+
     
         
         
