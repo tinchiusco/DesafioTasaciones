@@ -126,10 +126,23 @@ const client = [];
    
 
     function calcPrice (totalMeter, priceMeter){
-        return totalMeter*priceMeter
+        
+        let index = calcIndex(mFront,mBg)
+        return totalMeter*priceMeter*index
     }
 
-    function zone (city){
+    function calcIndex(mFront, mBg) {
+        mFront > mBg ? 1.3 : 0.9;}
+        /* if (mFront > mBg) {
+                index = 1.3;
+                return index;
+            }else if (mFront <= mBg) {
+                index = 0.9;
+                return index;
+        }
+    } */
+    
+    function zone(city){
      switch (city.value) {
         case "Eldorado":
             return 5500;
@@ -166,6 +179,11 @@ const client = [];
             const password = 1234 */
         
         const client = JSON.parse(localStorage.getItem("Client"));
+        
+        let emptytext= `<div class="admin"><p>No hay clientes cargados en el sistema</p></div>`;
+        client === 0 ? emptytext : showAll()
+        
+        function showAll(){
         let aux = "";
 
         client.forEach( client => {
@@ -186,7 +204,7 @@ const client = [];
             </div>`
       
         abstract.innerHTML = aux; 
-        })}
+    })}}
             )
         
 
