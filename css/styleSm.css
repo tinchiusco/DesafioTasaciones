@@ -1279,7 +1279,9 @@ iframe {
   width: 50%;
   height: auto;
 }
-
+.hidden {
+  display: none;
+}
 .reduceLogo {
   max-width: 350px;
   max-height: 200px;
