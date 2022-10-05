@@ -1,0 +1,30 @@
+{
+  "name": "trabajo-pagina-tasaciones",
+  "version": "1.0.0",
+  "description": "Pagina Web Tasaciones Inmobiliarias",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass --watch scss/style.scss css/style.css",
+    "clean:css": "purgecss --css css/style.css --content *.html ./pages/*html -o css/styleSm.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tinchiusco/DesafioTasaciones.git"
+  },
+  "author": "Martin Rivas Anaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tinchiusco/DesafioTasaciones/issues"
+  },
+  "homepage": "https://github.com/tinchiusco/DesafioTasaciones#readme",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap": "^5.2.1",
+    "nodemon": "^2.0.19",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.1.3"
+  }
+}
