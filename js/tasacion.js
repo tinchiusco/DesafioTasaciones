@@ -124,23 +124,13 @@ const client = [];
         return mFront.value * mBg.value
     }  
    
+// operador TERNARIO
 
     function calcPrice (totalMeter, priceMeter){
-        
-        let index = calcIndex(mFront,mBg)
-        return totalMeter*priceMeter*index
+        return totalMeter*priceMeter*(mFront > mBg ? 1.3 : 0.9);
     }
 
-    function calcIndex(mFront, mBg) {
-        mFront > mBg ? 1.3 : 0.9;}
-        /* if (mFront > mBg) {
-                index = 1.3;
-                return index;
-            }else if (mFront <= mBg) {
-                index = 0.9;
-                return index;
-        }
-    } */
+    
     
     function zone(city){
      switch (city.value) {
@@ -160,30 +150,26 @@ const client = [];
     }
 
     const admin = document.getElementById("admin");
+    const hidden = document.getElementById("hidden");
+    const signIn = document.getElementById("signIn");
+    const password = document.getElementById("password");
 
-    admin.addEventListener("click", () => {
+    admin.addEventListener("click", () =>{
+        hidden.classList.remove("hidden");
+    })
 
-    
+    signIn.addEventListener("click", () => {
         
-        /* let passwordInput = `<div>
-        <label for="password" class="form-label">Ingrese su clave de administrador</label>
-        <input class="form-control" id="password" placeholder="La clave es 1234 (como mi banco)">
-        <button id="signIn" type="submit" class="btn btn-outline-dark m-2 btn-lg bg-btn">Ingresar</button>
-        </div>` 
-        
 
-        abstract.innerHTML = passwordInput
+    /* password === 1234 ? showAll() : emptytext */
 
-        const signIn = document.getElementById("signIn")
-        signIn.addEventListener("click", () => {
-            const password = 1234 */
         
         const client = JSON.parse(localStorage.getItem("Client"));
         
-        let emptytext= `<div class="admin"><p>No hay clientes cargados en el sistema</p></div>`;
-        client === 0 ? emptytext : showAll()
         
-        function showAll(){
+    
+        
+        
         let aux = "";
 
         client.forEach( client => {
@@ -204,7 +190,7 @@ const client = [];
             </div>`
       
         abstract.innerHTML = aux; 
-    })}}
+    })}
             )
         
 

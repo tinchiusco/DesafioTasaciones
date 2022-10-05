@@ -148,7 +148,7 @@
                 <label  for="mBg" class="form-label">Metros de fondo</label>
                 <input type="number" id="mBg" class="form-control" placeholder="50">
             </div>
-        <legend class="mt-4">Seleccione las opciones que posee disponible la propiedad/terreno</legend>
+        <!-- <legend class="mt-4">Seleccione las opciones que posee disponible la propiedad/terreno</legend>
             
         <div class="formCheck d-flex justify-content-around flex-wrap">
           <div class="m-5 checkBox d-flex justify-content-start">
@@ -187,7 +187,7 @@
            <div class="m-5 checkBox d-flex justify-content-start">
             <input type="checkbox" name="detail"><label for="parrilla">Parrilla</label>
            </div>
-          </div>
+          </div> -->
         
         <!-- <legend>Ingrese la ubicación exacta de su terreno/propiedad</legend> -->
         
@@ -200,6 +200,11 @@
             <button type="reset" class="btn btn-outline-dark m-2 btn-lg bg-btn">Reset</button>
             <button id="admin" type="button" class="btn btn-outline-dark m-2 btn-lg bg-btn">Ingreso solo para Administrador</button>
           </div>
+          <div id="hidden" class="hidden">
+            <label for="password" class="form-label">Ingrese su clave de administrador</label>
+            <input class="form-control" id="password" placeholder="La clave es 1234 (como mi banco)">
+            <button id="signIn" type="button" class="btn btn-outline-dark m-2 btn-lg bg-btn">Ingresar</button>
+            </div>
        
         </form>
 
