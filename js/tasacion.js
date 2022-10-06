@@ -178,14 +178,14 @@ const client = [];
                 background: "#85c226",
                 text:`Password correcto, puede usar poderes de Administrador`,
                 icon: "success"
-            }).trim()
+            })
                 } else{
                     swal.fire({
                         text:`Password Incorrecto`,
                         background: "#B73E3E",
                         backdrop: "rgba(121, 120, 120)",
                         icon: "warning"
-                    });
+                    }).trim();
                 }
             })
         
