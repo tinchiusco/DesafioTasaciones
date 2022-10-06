@@ -146,10 +146,48 @@ const client = [];
         
     }
 
+
+    // INICIO LIBRERIA
+
     const admin = document.getElementById("admin");
 
     admin.addEventListener("click", () => {
 
+        Swal.fire({
+            title: "Ingreso ADM",
+            html: `<input type="password" id="password" class="swal2-input" placeholder="La clave es 1234">`,
+            //focusConfirm: false,
+            background: "#85c226",
+            backdrop: "rgba(121, 120, 120)",
+            confirmButtonText: "Acceder",
+            confirmButtonColor: "rgba(121, 120, 120)",
+            showCancelButton: true,
+            cancelButtonText: "Salir",
+            cancelButtonColor: "rgba(121, 120, 120)",
+            preConfirm: () => {
+                const password = Swal.getPopup().querySelector('#password').value
+                if (!password) {
+                  Swal.showValidationMessage(`Ingrese la clave`)
+                }
+                return {password: password}
+            }
+            }
+            ).then((result) => {
+            if (result.value.password == 1234){
+            Swal.fire({
+                background: "#85c226",
+                text:`Password correcto, puede usar poderes de Administrador`,
+                icon: "success"
+            }).trim()
+                } else{
+                    swal.fire({
+                        text:`Password Incorrecto`,
+                        background: "#B73E3E",
+                        backdrop: "rgba(121, 120, 120)",
+                        icon: "warning"
+                    });
+                }
+            })
         
         const client = JSON.parse(localStorage.getItem("Client"));
         
