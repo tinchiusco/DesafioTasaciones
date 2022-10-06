@@ -165,9 +165,9 @@ const client = [];
             cancelButtonText: "Salir",
             cancelButtonColor: "rgba(121, 120, 120)",
             preConfirm: () => {
-                const password = Swal.getPopup().querySelector('#password').value
+                const password = Swal.getPopup().querySelector('#password').value;
                 if (!password) {
-                  Swal.showValidationMessage(`Ingrese la clave`)
+                  Swal.showValidationMessage(`Ingrese la clave`);
                 }
                 return {password: password}
             }
@@ -185,7 +185,7 @@ const client = [];
                         background: "#B73E3E",
                         backdrop: "rgba(121, 120, 120)",
                         icon: "warning"
-                    }).trim();
+                    })
                 }
             })
         
