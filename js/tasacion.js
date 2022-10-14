@@ -178,7 +178,9 @@ const client = [];
                 background: "#85c226",
                 text:`Password correcto, puede usar poderes de Administrador`,
                 icon: "success"
-            })
+                
+            }); showAll()
+
                 } else{
                     swal.fire({
                         text:`Password Incorrecto`,
@@ -188,8 +190,15 @@ const client = [];
                     })
                 }
             })
+
+})
+
+//Funcion para poderes de administrador
+
+    function showAll() {
         
-        const client = JSON.parse(localStorage.getItem("Client"));
+      
+const client = JSON.parse(localStorage.getItem("Client"));
         
         
         let aux = "";
@@ -212,13 +221,24 @@ const client = [];
             </div>`
       
         abstract.innerHTML = aux; 
-    })}
-            )
+    })
+}
         
-
+    const usd ="https://criptoya.com/api/dolar";
     
-        
-        
+    console.log(usd)
+
+    let quoter = document.getElementById("quoter");
+
+    setInterval(()=> {
+        fetch(usd)
+        .then(response => response.json())
+        .then(({blue, oficial, ccl}) => {
+            quoter.innerHTML = 
+            `<h4>Dolar oficial : ${oficial} Dolar blue: ${blue} Dolar Contado c/ liq: ${ccl}`
+        })
+        .catch(error => console.error(error));
+    }, 3000);
     
 
 

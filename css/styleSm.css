@@ -1219,6 +1219,7 @@ h2, .h2 {
   }
 }
 
+
 legend {
   font-size: 2rem;
   color: rgb(238, 237, 237);
@@ -1392,6 +1393,13 @@ span {
   .reduceImg {
     width: 100px;
   }
+}
+
+.quoter {
+  width: 100vw;
+  height: 3%;
+  background-color: black;
+  color: #20c997;
 }
 
 /*# sourceMappingURL=style.css.map */
