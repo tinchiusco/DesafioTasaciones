@@ -126,13 +126,21 @@ const client = [];
     function calcPrice (totalMeter, priceMeter){
         return totalMeter*priceMeter*(mFront > mBg ? 1.3 : 0.9);
     }
+    
+    const usd ="https://criptoya.com/api/dolar";
+    let usdAux = 0;
+    fetch(usd)
+        .then(response => response.json())
+        .then(({ccl}) => { 
+            usdAux = ccl
+        })
+   
 
-    
-    
     function zone(city){
+        
      switch (city.value) {
         case "Eldorado":
-            return 5500;
+            return 18 * usdAux;
         case "Montecarlo":
             return 4500;
         case "El Alcazar":
@@ -142,9 +150,7 @@ const client = [];
         case "Pto Iguazu":
             return 6000;
             
-     }
-        
-    }
+        }}
 
 
     // INICIO LIBRERIA
@@ -222,7 +228,7 @@ const client = JSON.parse(localStorage.getItem("Client"));
        
 //Inicio FETCH
 
-    const usd ="https://criptoya.com/api/dolar";
+    
     
     let quoter = document.getElementById("quoter");
     
@@ -240,7 +246,15 @@ const client = JSON.parse(localStorage.getItem("Client"));
         })
         .catch(error => console.error(error));
     }, 3000);
+
     
+
+    function usdIndex() {
+    fetch(usd)
+        .then(response => response.json())
+        .then(({ccl}) => {
+            return ccl;
+        })}
 
 
     // Seccion administrador
