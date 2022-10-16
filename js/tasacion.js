@@ -1,3 +1,73 @@
+function usdIndex() {
+    fetch(usd)
+        .then(response => response.json())
+        .then(({ccl}) => {
+            return ccl;
+        })}
+
+//Funcion para poderes de administrador
+
+function showAll() { 
+    const client = JSON.parse(localStorage.getItem("Client"));
+            let aux = "";
+    
+            client.forEach( client => {
+                aux += `<div class="admin">
+                <p>Comitente: ${client.name}</p>
+                <p>DNI:${client.dni}
+                <p>Email: ${client.email}</p>
+                <p>Direccion: ${client.address}</p>
+                <p>Telefono: ${client.phone}</p>
+                <p>Pais: ${client.country}</p>
+                <p>Provincia: ${client.province}</p>
+                <p>Ciudad: ${client.city}</p>
+                <p>Relacion con el inmueble: ${client.owner}</p>
+                <p>Metros de frente: ${client.mFront}m2</>
+                <p>Metros de fondo: ${client.mBg}m2</>
+                <p>Metros cuadrados totales: ${client.totalMeter}m2</p>
+                <p>Precio terreno: $${client.priceTotal}<br>
+                </div>`
+          
+            abstract.innerHTML = aux; 
+        })
+    }
+    function check(){
+        let owner = document.getElementsByName("owner");
+ 
+        for (i = 0; i< owner.length ; i++)
+         if (owner[i].checked) {
+             return owner[i].value;
+         }
+     }
+        
+   
+     function calcMeter (mFront, mBg){
+         return mFront.value * mBg.value
+     }  
+    
+ // operador TERNARIO
+ 
+     function calcPrice (totalMeter, priceMeter){
+         return totalMeter*priceMeter*(mFront > mBg ? 1.3 : 0.9);
+     }
+     
+     function zone(city){
+         
+      switch (city.value) {
+         case "Eldorado":
+             return 18 * usdAux;
+         case "Montecarlo":
+             return 14 * usdAux;
+         case "El Alcazar":
+             return 11 * usdAux;
+         case "Pto Rico":
+             return 16 * usdAux;
+         case "Pto Iguazu":
+             return 22 * usdAux;
+             
+         }}
+
+         
 
 class Client {
     constructor(name,dni,email,address,phone,country,province,city, owner, mFront, mBg, totalM, priceMeter, priceTotal, date){
@@ -41,7 +111,7 @@ const client = [];
 
 
 
-    // Anadir cliente
+    // Anadir cliente - Event
 
     const appraisal = document.getElementById("form");
 
@@ -57,12 +127,12 @@ const client = [];
     const province = document.getElementById("province");
     const city = document.getElementById("city");
     const owner = check();
-
+// Datos propiedad
     const mFront = document.getElementById("mFront");
     const mBg = document.getElementById("mBg");
     const totalMeter = calcMeter(mFront,mBg);
     const priceMeter = zone(city);
-    const priceTotal = calcPrice(totalMeter,priceMeter)
+    const priceTotal = calcPrice(totalMeter,priceMeter).toFixed()
     const date = new Date();
 
     const clientAp = new Client(name.value, dni.value, email.value, address.value, phone.value, country.value, province.value, city.value, owner, mFront.value, mBg.value, totalMeter, priceMeter, priceTotal, date);
@@ -84,6 +154,8 @@ const client = [];
     
 })
 
+//Devolucion de calculo de tasacion
+
     const abstract = document.getElementById("abstract");
     
     const show = (clientAp) => {
@@ -100,57 +172,21 @@ const client = [];
                     <p>Provincia: ${clientAp.province}</p>
                     <p>Ciudad: ${clientAp.city}</p>
                     <p>Relacion con el inmueble: ${clientAp.owner}</p>
-                    <p>Metros de frente: ${clientAp.mFront}</>
-                    <p>Metros de fondo: ${clientAp.mBg}</>
-                    <p>Metros cuadrados totales: ${clientAp.totalMeter}</p>
-                    <p>Precio terreno: ${clientAp.priceTotal}`
+                    <p>Metros de frente: ${clientAp.mFront} m2</>
+                    <p>Metros de fondo: ${clientAp.mBg} m2</>
+                    <p>Metros cuadrados totales: ${clientAp.totalMeter} m2</p>
+                    <p>Precio terreno: $${clientAp.priceTotal}`
                 
                     abstract.innerHTML = aux; 
     }
     
-    function check(){
-       let owner = document.getElementsByName("owner");
-
-       for (i = 0; i< owner.length ; i++)
-        if (owner[i].checked) {
-            return owner[i].value;
-        }
-    }
-       
-  
-    function calcMeter (mFront, mBg){
-        return mFront.value * mBg.value
-    }  
-   
-// operador TERNARIO
-    function calcPrice (totalMeter, priceMeter){
-        return totalMeter*priceMeter*(mFront > mBg ? 1.3 : 0.9);
-    }
-    
-    const usd ="https://criptoya.com/api/dolar";
+        const usd ="https://criptoya.com/api/dolar";
     let usdAux = 0;
     fetch(usd)
         .then(response => response.json())
         .then(({ccl}) => { 
             usdAux = ccl
         })
-   
-
-    function zone(city){
-        
-     switch (city.value) {
-        case "Eldorado":
-            return 18 * usdAux;
-        case "Montecarlo":
-            return 4500;
-        case "El Alcazar":
-            return 3500;
-        case "Pto Rico":
-            return 5000;
-        case "Pto Iguazu":
-            return 6000;
-            
-        }}
 
 
     // INICIO LIBRERIA
@@ -199,32 +235,7 @@ const client = [];
 
 })
 
-//Funcion para poderes de administrador
 
-function showAll() { 
-const client = JSON.parse(localStorage.getItem("Client"));
-        let aux = "";
-
-        client.forEach( client => {
-            aux += `<div class="admin">
-            <p>Comitente: ${client.name}</p>
-            <p>DNI:${client.dni}
-            <p>Email: ${client.email}</p>
-            <p>Direccion: ${client.address}</p>
-            <p>Telefono: ${client.phone}</p>
-            <p>Pais: ${client.country}</p>
-            <p>Provincia: ${client.province}</p>
-            <p>Ciudad: ${client.city}</p>
-            <p>Relacion con el inmueble: ${client.owner}</p>
-            <p>Metros de frente: ${client.mFront}</>
-            <p>Metros de fondo: ${client.mBg}</>
-            <p>Metros cuadrados totales: ${client.totalMeter}</p>
-            <p>Precio terreno: ${client.priceTotal}<br>
-            </div>`
-      
-        abstract.innerHTML = aux; 
-    })
-}
        
 //Inicio FETCH
 
@@ -249,12 +260,7 @@ const client = JSON.parse(localStorage.getItem("Client"));
 
     
 
-    function usdIndex() {
-    fetch(usd)
-        .then(response => response.json())
-        .then(({ccl}) => {
-            return ccl;
-        })}
+    
 
 
     // Seccion administrador
